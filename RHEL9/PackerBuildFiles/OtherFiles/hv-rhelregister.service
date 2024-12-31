@@ -1,0 +1,13 @@
+[Unit]
+Description=Custom Scripts to register and unregister RHEL instance during instant clone usage
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/rhel-register.sh
+ExecStop=/usr/local/sbin/rhel-unregister.sh
+
+[Install]
+WantedBy=graphical.target
