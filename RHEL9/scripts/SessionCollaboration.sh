@@ -8,5 +8,5 @@ mv "${base_name}" "/usr/share/gnome-shell/extensions"
 chmod -R 755 "/usr/share/gnome-shell/extensions/${base_name}/"
 cd /tmp/PackerBuildFiles/OtherFiles/
 cp ./00-extensions.txt /etc/dconf/db/local.d/00-extensions
-chmod 744 /etc/dconf/db/local.d/00-extensions
+chmod 644 /etc/dconf/db/local.d/00-extensions
 dconf update
